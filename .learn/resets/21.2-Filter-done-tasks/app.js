@@ -9,8 +9,4 @@ let tasks = [
   { label: "Make a trip", done: false },
 ];
 
-let made = tasks.filter(function(hecho){
-  return hecho.done == Boolean(true);
-});
-
-console.log(made);
+// Your code here
