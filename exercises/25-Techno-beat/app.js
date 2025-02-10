@@ -1,19 +1,19 @@
 // Your code here
-function lyricsGenerator(mix){
-    song = '';
-    count0 = 0;
+function lyricsGenerator(music){
+    let song = '';
+    let count0 = 0;
 
- for (let beat = 0; beat >=0; beat++){
-    if (mix[beat] == 0){
-        console.log('Boom');
+ for (let beat = 0; beat < music.length; beat++){
+    if (music[beat] == 0){
+        song += 'Boom ';
         count0 = 0;
     }
-    else if (mix[beat] == 1){
-        console.log('Drop the bass');
+    else if (music[beat] == 1){
+        song += 'Drop the bass ';
         count0 += 1;
-    }
-    else if (count0 === 3) {
-        console.log('!!!Break the bass!!!');
+        if (count0 === 3) {
+            song += '!!!Break the bass!!! ';
+        }
     }
  }
  return song;
